@@ -20,3 +20,11 @@ natural_x_veg_graph1
 impervious_x_veg_graph2 <-ggplot(data = site_selection) +
   geom_point(mapping = aes(x = Impervious, y = Vegetation, color = Habitat.Type))
 impervious_x_veg_graph2
+
+natural_x_veg_graph3 <-ggplot(data = site_selection) +
+  geom_point(mapping = aes(x = Natural.Offset, y = Vegetation.Offset, color = Habitat.Type))
+natural_x_veg_graph3
+
+impervious_x_veg_graph4 <-ggplot(data = site_selection) +
+  geom_point(mapping = aes(x = Impervious.Offset, y = Vegetation.Offset, color = Habitat.Type))
+impervious_x_veg_graph4
