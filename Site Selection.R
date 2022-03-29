@@ -14,6 +14,8 @@ Natural <- site_selection$X..Natural.Landcover
 Vegetation <- site_selection$Vegetation.Heterogeneity.Score.
 Impervious <- site_selection$X..Impervious.Area
 Habitat.Type <- site_selection$ï..Habitat.Type
+Buffer_2500m <- site_selection$X..Natural.Landcover.2500m
+Offset_2500m <- site_selection$X2500m.Offset
 
 natural_x_veg_graph1 <-ggplot(data = site_selection) +
   geom_point(mapping = aes(x = Natural, y = Vegetation, color = Habitat.Type))
@@ -46,4 +48,8 @@ impervious_x_veg_graph4 + geom_label_repel(aes(x = Impervious.Offset, y = Vegeta
                                            box.padding   = 0.35, 
                                            point.padding = 0.5,
                                            segment.color = 'grey50') + theme_classic()
+
+Natural_x_Veg_graph5 <-ggplot(data = site_selection) +
+  geom_point(mapping = aes(x = Offset_2500m, y = Vegetation.Offset, color = Habitat.Type))         
+Natural_x_Veg_graph5
   
