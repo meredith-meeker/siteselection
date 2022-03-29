@@ -12,10 +12,11 @@ Habitat <- site_selection$Habitat.Unit.Id
 Natural <- site_selection$X..Natural.Landcover
 Vegetation <- site_selection$Vegetation.Heterogeneity.Score.
 Impervious <- site_selection$X..Impervious.Area
+Habitat.Type <- site_selection$ï..Habitat.Type
 
 natural_x_veg_graph1 <-ggplot(data = site_selection) +
-  geom_point(mapping = aes(x = Natural, y = Vegetation))
+  geom_point(mapping = aes(x = Natural, y = Vegetation, color = Habitat.Type))
 natural_x_veg_graph1
 impervious_x_veg_graph2 <-ggplot(data = site_selection) +
-  geom_point(mapping = aes(x = Impervious, y = Vegetation))
+  geom_point(mapping = aes(x = Impervious, y = Vegetation, color = Habitat.Type))
 impervious_x_veg_graph2
